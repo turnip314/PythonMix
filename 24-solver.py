@@ -1,6 +1,8 @@
 import itertools
 import math
 
+SHOW_ANSWERS = False
+
 INF = 10000
 
 class Type:
@@ -278,10 +280,10 @@ solutions = solve([1,5,6,4], False, False)
 solution_strings = list(set([str(sol) for sol in solutions]))
     
 
-print()
-    
-for sol in solution_strings:
-    print(sol[1:-1])
-
+if SHOW_ANSWERS:
+    for sol in solution_strings:
+        print(sol[1:-1])
+else:
+    print(len(solution_strings) > 0)
 
 
